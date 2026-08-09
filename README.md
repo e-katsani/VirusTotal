@@ -52,17 +52,10 @@ This scenario shows how analysts can investigate suspicious files safely before 
 
 Malware can include:
 
+Upload Image
+
 <img width="519" height="591" alt="Image" src="https://github.com/user-attachments/assets/b1c063f7-a615-4a75-b0da-dbf83ed9c948" />
 
-- Viruses
-- Worms
-- Trojans
-- Ransomware
-- Spyware
-- Keyloggers
-- Backdoors
-- Botnets
-- Downloaders
 
 Malware may be used to steal information, encrypt files, install backdoors, communicate with attacker-controlled servers, or download additional malware.
 
