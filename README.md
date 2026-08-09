@@ -331,9 +331,8 @@ python threat_intelligence_tool.py
 Example hash input:
 
 ```text
-44d88612fea8a8f36de82e1278abb02f
+5ff465afaabcbf015@d1a3ab2c2e74f3a4426467
 ```
-Upload Image
 
 <img width="1108" height="798" alt="Image" src="https://github.com/user-attachments/assets/690b8e32-4f58-49c8-9d38-f66554747c30" />
 
