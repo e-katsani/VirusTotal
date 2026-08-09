@@ -335,7 +335,7 @@ Example hash input:
 ```
 Upload Image
 
-
+<img width="1108" height="798" alt="Image" src="https://github.com/user-attachments/assets/690b8e32-4f58-49c8-9d38-f66554747c30" />
 
 Example output:
 
