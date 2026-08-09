@@ -38,7 +38,7 @@ The project focuses on a safe and realistic incident response workflow:
 2. The analyst does **not** open, run, or execute the file.
 3. The analyst collects safe indicators of compromise, also called **IOCs**.
 4. The file hash is checked with a Python script using the VirusTotal API.
-5. Also,the file hash is reviewed manually using the VirusTotal website.
+5. The file hash is also reviewed manually using the VirusTotal website.
 6. The analyst reviews detections, metadata, relationships, and indicators.
 7. The analyst recommends response actions such as blocking, investigating, or escalating.
 
