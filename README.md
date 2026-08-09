@@ -52,7 +52,6 @@ This scenario shows how analysts can investigate suspicious files safely before 
 
 Malware can include:
 
-Upload Image
 
 <img width="519" height="591" alt="Image" src="https://github.com/user-attachments/assets/b1c063f7-a615-4a75-b0da-dbf83ed9c948" />
 
