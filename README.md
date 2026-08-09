@@ -334,22 +334,9 @@ Example hash input:
 5ff465afaabcbf015@d1a3ab2c2e74f3a4426467
 ```
 
-<img width="1108" height="798" alt="Image" src="https://github.com/user-attachments/assets/690b8e32-4f58-49c8-9d38-f66554747c30" />
-
 Example output:
 
-```text
-Status Code: 200
-Name: eicar.com-39982
-Type: PowerShell
-Antivirus Engines: 74
-
-Detection Results
-Malicious: 62
-Suspicious: 0
-Undetected: 2
-Harmless: 0
-```
+<img width="1108" height="798" alt="Image" src="https://github.com/user-attachments/assets/690b8e32-4f58-49c8-9d38-f66554747c30" />
 
 The API script helps show:
 
