@@ -20,6 +20,7 @@ This project focuses on **basic static analysis**, which means reviewing informa
 By completing this tutorial, you will learn how to:
 
 - Understand the purpose of VirusTotal.
+- How VirusTotal can help identify possible malware types and behaviors.
 - Navigate the VirusTotal web interface.
 - Investigate files, URLs, domains, and IP addresses.
 - Obtain and use a VirusTotal API key.
