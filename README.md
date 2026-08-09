@@ -429,7 +429,7 @@ These mappings should be treated as investigation clues. They should be validate
 
 ---
 
-## 17. Demo Video and Screenshots
+## 17. Demo Video 
 
 A short backup demo video is included in this repository:
 
@@ -440,17 +440,7 @@ Upload Demo
 
 The video shows the Python script using the VirusTotal API to perform a safe file-hash lookup. This is the automated part of the project. It shows how an analyst can check a hash, receive a status code, and review detection results from the command line.
 
-Screenshots are organized into two folders:
-
-```text
-API_screenshots/
-Website_screenshots/
-```
-
-The API screenshots support the setup and Python demo. The website screenshots support the manual VirusTotal analysis, including detection results, file details, relationships, behavior, host-based indicators, network-based indicators, highlighted actions, and MITRE ATT&CK mappings.
-
 ---
-
 
 ## 18. Analyst Findings
 
@@ -560,10 +550,9 @@ VirusTotal is not a replacement for full malware analysis, but it is a valuable 
 
 ## 24. References
 
-- VirusTotal. Official Website and Documentation.
-- VirusTotal API v3 Documentation.
+- VirusTotal. Official Website and Documentation. Retrieved from https://www.virustotal.com/ 
 - SentinelOne Labs. "Exploring the VirusTotal Dataset: An Analyst's Guide to Effective Threat Research."
-- TryHackMe lab materials used for educational indicators.
-- BFOR/BFORE Malware Reverse Engineering course materials.
+- TryHackMe lab materials used for educational indicators. Retrived from https://tryhackme.com/room/intromalwareanalysis
+- BFOR/BFORE 418/618. Malware Reverse Engineering course materials.
 - Sikorski, Michael, and Andrew Honig. *Practical Malware Analysis: The Hands-On Guide to Dissecting Malicious Software.*
 
