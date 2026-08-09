@@ -452,7 +452,7 @@ These mappings should be treated as investigation clues. They should be validate
 A short backup demo video is included in this repository:
 
 ```markdown
-[Watch API_Demo.mov](https://github.com/e-katsani/VirusTotal/blob/59f59665511975373e93dabc257f30ec50414e31/API_Demo.mov)
+https://github.com/user-attachments/assets/77b15574-300d-42ff-a5db-edcc985bc2b6
 ```
 
 The video shows the Python script using the VirusTotal API to perform a safe file-hash lookup. This is the automated part of the project. It shows how an analyst can check a hash, receive a status code, and review detection results from the command line.
