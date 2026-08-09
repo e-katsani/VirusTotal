@@ -48,8 +48,6 @@ This scenario shows how analysts can investigate suspicious files safely before 
 
 ## 4. What Is Malware?
 
-<img width="640" height="433" alt="Image" src="https://github.com/user-attachments/assets/94c5108a-d2b6-40c0-8f26-8aed51c156cf" />
-
 **Malware** is software or code designed to perform unwanted, unauthorized, or harmful actions on a computer system.
 
 Malware can include:
