@@ -50,9 +50,6 @@ This scenario shows how analysts can investigate suspicious files safely before 
 
 **Malware** is software or code designed to perform unwanted, unauthorized, or harmful actions on a computer system.
 
-Malware can include:
-
-
 <img width="519" height="591" alt="Image" src="https://github.com/user-attachments/assets/b1c063f7-a615-4a75-b0da-dbf83ed9c948" />
 
 
@@ -174,7 +171,6 @@ source .venv/bin/activate
 ```bash
 pip install requests python-dotenv rich
 ```
-Upload Image
 
 <img width="1470" height="956" alt="Image" src="https://github.com/user-attachments/assets/a883c440-4838-4a3f-802f-21b15cac4ed1" />
 
