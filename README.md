@@ -31,6 +31,23 @@ By completing this tutorial, you will learn how to:
 
 ---
 
+## 5. What Is VirusTotal?
+
+**VirusTotal** is an online threat intelligence and malware analysis platform. It allows analysts to search indicators such as:
+
+- File hashes
+- Files
+- URLs
+- Domains
+- IP addresses
+
+VirusTotal collects results from many antivirus engines and security vendors. This helps analysts compare multiple detections instead of relying on only one security product.
+
+In this project, VirusTotal is used mainly for **file hash analysis**.
+
+A file hash is like a digital fingerprint of a file. If two files have the same hash, they are usually the same file. This allows an analyst to check whether a suspicious file is already known without opening it.
+
+
 ## 3. How to Use VirusTotal to Help Solve Cybersecurity Problems
 
 The project focuses on a safe and realistic incident response workflow:
@@ -54,6 +71,7 @@ This scenario shows how analysts can investigate suspicious files safely before 
 <img width="519" height="591" alt="Image" src="https://github.com/user-attachments/assets/b1c063f7-a615-4a75-b0da-dbf83ed9c948" />
 
 
+
 Malware may be used to steal information, encrypt files, install backdoors, communicate with attacker-controlled servers, or download additional malware.
 
 Understanding malware is important because analysts need to answer questions such as:
@@ -66,31 +84,13 @@ Understanding malware is important because analysts need to answer questions suc
 
 ---
 
-## 5. What Is VirusTotal?
-
-**VirusTotal** is an online threat intelligence and malware analysis platform. It allows analysts to search indicators such as:
-
-- File hashes
-- Files
-- URLs
-- Domains
-- IP addresses
-
-VirusTotal collects results from many antivirus engines and security vendors. This helps analysts compare multiple detections instead of relying on only one security product.
-
-In this project, VirusTotal is used mainly for **file hash analysis**.
-
-A file hash is like a digital fingerprint of a file. If two files have the same hash, they are usually the same file. This allows an analyst to check whether a suspicious file is already known without opening it.
-
----
-
 ## 6. Why Use Static Analysis First?
 
-**Static analysis** means analyzing a file without running it.
+**Static analysis** means analyzing a file without running it. 
 
 This is usually the safest first step because malware can cause harm if executed. Static analysis helps an analyst collect evidence before deciding what to do next.
 
-VirusTotal can help answer important static-analysis questions:
+VirusTotal is one of the tools used in static-analysis because it can help answer important questions such as:
 
 - Does the file match existing antivirus signatures?
 - How many vendors detect it as malicious?
