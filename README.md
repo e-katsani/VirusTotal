@@ -31,7 +31,7 @@ By completing this tutorial, you will learn how to:
 
 ---
 
-## 5. What Is VirusTotal?
+## 3. What Is VirusTotal?
 
 **VirusTotal** is an online threat intelligence and malware analysis platform. It allows analysts to search indicators such as:
 
@@ -48,7 +48,7 @@ In this project, VirusTotal is used mainly for **file hash analysis**.
 A file hash is like a digital fingerprint of a file. If two files have the same hash, they are usually the same file. This allows an analyst to check whether a suspicious file is already known without opening it.
 
 
-## 3. How to Use VirusTotal to Help Solve Cybersecurity Problems
+## 4. How to Use VirusTotal to Help Solve Cybersecurity Problems
 
 The project focuses on a safe and realistic incident response workflow:
 
@@ -57,14 +57,14 @@ The project focuses on a safe and realistic incident response workflow:
 3. The analyst collects safe indicators of compromise, also called **IOCs**.
 4. The file hash is checked with a Python script using the VirusTotal API.
 5. The file hash is also reviewed manually using the VirusTotal website.
-6. The analyst reviews detections, metadata, relationships, and indicators.
-7. The analyst recommends response actions such as blocking, investigating, or escalating.
+7. The analyst reviews detections, metadata, relationships, and indicators.
+8. The analyst recommends response actions such as blocking, investigating, or escalating.
 
 This scenario shows how analysts can investigate suspicious files safely before deciding whether deeper dynamic analysis is needed.
 
 ---
 
-## 4. What Is Malware?
+## 5. What Is Malware?
 
 **Malware** is software or code designed to perform unwanted, unauthorized, or harmful actions on a computer system.
 
@@ -143,9 +143,7 @@ The project uses hashes and screenshots for safe analysis.
 
 Example safe test hash:
 
-```text
-44d88612fea8a8f36de82e1278abb02f
-```
+`44d88612fea8a8f36de82e1278abb02f`
 
 This is the EICAR test file hash. EICAR is used for safe antivirus testing and is not real malware.
 
@@ -195,35 +193,17 @@ The real `.env` file should **not** be uploaded to GitHub because it contains a 
 
 ---
 
-## 11. Project Files
+## 11. Repository Contents
 
-```text
-VirusTotal/
-│
-├── README.md
-├── threat_intelligence_tool.py
-├── API_Demo.mov
-├── API_screenshots/
-│   └── screenshots from the Python/API demo
-└── Website_screenshots/
-    ├── 00_Upload Hash.png
-    ├── 01_Detection_65 out of 67.png
-    ├── 02_Hash & File Details.png
-    ├── 03_Contacted Domains.png
-    ├── 04_Network Based Indicators.png
-    ├── 05_Graph Summary.png
-    ├── 06_Mitre ATT&CK.png
-    ├── 07_Malware Behavior.png
-    ├── 08_Network Communication.png
-    ├── 09_Files Activity.png
-    ├── 10_Registry Keys.png
-    ├── 11_Process and Service Actions.png
-    └── 12_Highlighted Actions.png
-```
+This repository includes the main project documentation, the Python API script, screenshots, and a short demo video.
 
-The screenshots support the API demo, VirusTotal website analysis, and final analyst findings.
+- `README.md` — Main project explanation and analysis
+- `threat_intelligence_tool.py` — Python script used for VirusTotal API hash lookups
+- `API_Demo.mov` — Short demo video showing the API lookup process
+- `API_screenshots/` — Screenshots from the API setup and command-line demo
+- `Website_screenshots/` — Screenshots from the VirusTotal website analysis
 
----
+The screenshots and demo support the project workflow by showing both the automated API lookup and the manual VirusTotal website review.
 
 ## 12. Workflow
 
@@ -307,14 +287,24 @@ Some VirusTotal behavior results need analyst interpretation. A single item does
 - **`GetTickCount`** checks system uptime and can be used for timing or sandbox-detection logic.
 - **`GetSystemMetrics`** collects system information and can help malware recognize virtual or analysis environments.
 
-### Import or Function | Possible Meaning |
+### Imports and Functions
+
+Imports and functions are clues about what a file may be able to do. They do not prove that a file is malicious by themselves, but they help the analyst understand possible behavior.
+
+| Import or Function | Possible Meaning |
 |---|---|
-| `CreateProcessA` | May start another process |
-| `VirtualProtect` | May change memory permissions |
-| `CreateFileA` / `WriteFile` | May create or modify files |
-| `RegCreateKeyW` | May modify the Windows Registry |
-| `CreateServiceA` / `StartServiceA` | May create or start a Windows service |
-| `connect` / `WSAStartup` | May communicate over the network |
+| `CreateProcessA` | The file may start another program or process. |
+| `VirtualProtect` | The file may change memory permissions, which can be suspicious in malware analysis. |
+| `CreateFileA` / `WriteFile` | The file may create, open, or modify files on the system. |
+| `RegCreateKeyW` | The file may create or modify Windows Registry keys. |
+| `CreateServiceA` / `StartServiceA` | The file may create or start a Windows service, which can be related to persistence. |
+| `connect` / `WSAStartup` | The file may communicate over the network. |
+| `IsDebuggerPresent` | The file may check whether it is being analyzed or debugged. |
+| `Sleep` | The file may pause before running actions, sometimes to avoid short sandbox analysis. |
+| `GetTickCount` | The file may check system uptime or timing information. |
+| `GetSystemMetrics` | The file may collect system information, possibly to detect a virtual machine or sandbox. |
+
+These functions should be treated as investigation clues. The analyst should compare them with other evidence such as antivirus detections, file activity, network activity, and MITRE ATT&CK mappings.
 
 ### Analyst interpretation
 
