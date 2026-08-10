@@ -412,7 +412,10 @@ Some VirusTotal behavior results need analyst interpretation. A single item does
 - **PowerShell, cmd.exe, and cscript.exe** are legitimate Windows tools, but attackers often abuse them for script execution.
 
 
+
 <img width="1441" height="767" alt="Image" src="https://github.com/user-attachments/assets/7554c864-e150-47fc-8775-4535748f3572" />
+
+
 
 
 
