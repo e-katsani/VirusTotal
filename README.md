@@ -566,5 +566,5 @@ This repository includes the main project documentation, the Python API script, 
 - OpenAI. (2026). ChatGPT (GPT-5.3) [Large language model]. https://chat.openai.com/
 - Sikorski, Michael, and Andrew Honig. *Practical Malware Analysis: The Hands-On Guide to Dissecting Malicious Software.
 - TryHackMe lab materials used for educational indicators. Retrieved from https://tryhackme.com/room/intromalwareanalysis
-- VirusTotal. Official Website and Documentation. Retrieved from https://www.virustotal.com/.*
+- VirusTotal. Official Website and Documentation. Retrieved from https://www.virustotal.com/
 
