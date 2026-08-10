@@ -179,6 +179,17 @@ pip install requests python-dotenv rich
 pip show requests python-dotenv rich
 ```
 
+### Obtaining a VirusTotal API key
+
+1. Create or sign in to a VirusTotal account.
+2. Open your VirusTotal profile and select **API key**.
+3. Copy your personal API key.
+4. Store the key in a local `.env` file:
+
+```bash
+VT_API_KEY=your_api_key_here
+```
+
 ### API key setup
 
 The Python script requires a VirusTotal API key.
