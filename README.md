@@ -20,7 +20,7 @@ This project focuses on **basic static analysis**, which means reviewing informa
 By completing this tutorial, you will learn how to:
 
 - Understand the purpose of VirusTotal.
-- How VirusTotal can help identify possible malware types and behaviors.
+- Understand how VirusTotal can help identify possible malware types and behaviors.
 - Navigate the VirusTotal web interface.
 - Investigate files, URLs, domains, and IP addresses.
 - Obtain and use a VirusTotal API key.
@@ -422,10 +422,8 @@ These mappings should be treated as investigation clues. They should be validate
 
 A short backup demo video is included in this repository:
 
-Upload Demo
-
 [Watch API_Demo.mov](https://github.com/user-attachments/assets/100207e4-20a9-4198-81c6-a204204be24b)
-```
+
 
 The video shows the Python script using the VirusTotal API to perform a safe file-hash lookup. This is the automated part of the project. It shows how an analyst can check a hash, receive a status code, and review detection results from the command line.
 
