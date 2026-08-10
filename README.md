@@ -546,7 +546,7 @@ This repository includes the main project documentation, the Python API script, 
 
 - VirusTotal. Official Website and Documentation. Retrieved from https://www.virustotal.com/ 
 - SentinelOne Labs. "Exploring the VirusTotal Dataset: An Analyst's Guide to Effective Threat Research."
-- TryHackMe lab materials used for educational indicators. Retrived from https://tryhackme.com/room/intromalwareanalysis
+- TryHackMe lab materials used for educational indicators. Retrieved from https://tryhackme.com/room/intromalwareanalysis
 - BFOR/BFORE 418/618. Malware Reverse Engineering course materials.
 - Sikorski, Michael, and Andrew Honig. *Practical Malware Analysis: The Hands-On Guide to Dissecting Malicious Software.*
 
