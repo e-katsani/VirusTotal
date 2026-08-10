@@ -410,10 +410,17 @@ Some VirusTotal behavior results need analyst interpretation. A single item does
 - **Dropped files** may show additional payloads created by the original file.
 - **Registry keys** may show configuration changes, persistence attempts, or file-association activity.
 - **PowerShell, cmd.exe, and cscript.exe** are legitimate Windows tools, but attackers often abuse them for script execution.
-- **`IsDebuggerPresent`** checks whether the program is being debugged. Malware may use this to detect analysis tools.
-- **`Sleep`** pauses execution. Malware may delay activity to avoid short sandbox runs.
-- **`GetTickCount`** checks system uptime and can be used for timing or sandbox-detection logic.
-- **`GetSystemMetrics`** collects system information and can help malware recognize virtual or analysis environments.
+
+Import Image
+
+
+  
+- **IsDebuggerPresent** checks whether the program is being debugged. Malware may use this to detect analysis tools.
+- **Sleep** pauses execution. Malware may delay activity to avoid short sandbox runs.
+- **GetTickCount** checks system uptime and can be used for timing or sandbox-detection logic.
+- **GetSystemMetrics** collects system information and can help malware recognize virtual or analysis environments.
+
+Import Image
 
 ### Imports and Functions
 
