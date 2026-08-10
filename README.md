@@ -307,6 +307,15 @@ Some VirusTotal behavior results need analyst interpretation. A single item does
 - **`GetTickCount`** checks system uptime and can be used for timing or sandbox-detection logic.
 - **`GetSystemMetrics`** collects system information and can help malware recognize virtual or analysis environments.
 
+  | Import or Function | Possible Meaning |
+|---|---|
+| `CreateProcessA` | May start another process |
+| `VirtualProtect` | May change memory permissions |
+| `CreateFileA` / `WriteFile` | May create or modify files |
+| `RegCreateKeyW` | May modify the Windows Registry |
+| `CreateServiceA` / `StartServiceA` | May create or start a Windows service |
+| `connect` / `WSAStartup` | May communicate over the network |
+
 ### Analyst interpretation
 
 The website analysis showed that the hash had strong detection results and useful context beyond the detection score. The most useful findings were the file details, vendor detections, related indicators, behavior activity, and MITRE ATT&CK mappings.
@@ -370,15 +379,6 @@ Packing and obfuscation are techniques used to hide a program's real code or beh
 ### Imports
 
 Imports are functions used by a program. They can give clues about behavior.
-
-| Import or Function | Possible Meaning |
-|---|---|
-| `CreateProcessA` | May start another process |
-| `VirtualProtect` | May change memory permissions |
-| `CreateFileA` / `WriteFile` | May create or modify files |
-| `RegCreateKeyW` | May modify the Windows Registry |
-| `CreateServiceA` / `StartServiceA` | May create or start a Windows service |
-| `connect` / `WSAStartup` | May communicate over the network |
 
 Imports are clues, not proof. They help the analyst form a hypothesis.
 
