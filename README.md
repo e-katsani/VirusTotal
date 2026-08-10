@@ -57,8 +57,8 @@ The project focuses on a safe and realistic incident response workflow:
 3. The analyst collects safe indicators of compromise, also called **IOCs**.
 4. The file hash is checked with a Python script using the VirusTotal API.
 5. The file hash is also reviewed manually using the VirusTotal website.
-7. The analyst reviews detections, metadata, relationships, and indicators.
-8. The analyst recommends response actions such as blocking, investigating, or escalating.
+6. The analyst reviews detections, metadata, relationships, and indicators.
+7. The analyst recommends response actions such as blocking, investigating, or escalating.
 
 This scenario shows how analysts can investigate suspicious files safely before deciding whether deeper dynamic analysis is needed.
 
@@ -411,8 +411,6 @@ Some VirusTotal behavior results need analyst interpretation. A single item does
 - **Registry keys** may show configuration changes, persistence attempts, or file-association activity.
 - **PowerShell, cmd.exe, and cscript.exe** are legitimate Windows tools, but attackers often abuse them for script execution.
 
-View Image Below
-
 
 <img width="1441" height="767" alt="Image" src="https://github.com/user-attachments/assets/7554c864-e150-47fc-8775-4535748f3572" />
 
@@ -421,9 +419,6 @@ View Image Below
 - **Sleep** pauses execution. Malware may delay activity to avoid short sandbox runs.
 - **GetTickCount** checks system uptime and can be used for timing or sandbox-detection logic.
 - **GetSystemMetrics** collects system information and can help malware recognize virtual or analysis environments.
-
-
-- View Image Below
 
 
 <img width="1286" height="686" alt="Image" src="https://github.com/user-attachments/assets/0dcd4167-9dcd-4c3c-911c-b097e99419c9" />
