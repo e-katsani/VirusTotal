@@ -414,6 +414,7 @@ Some VirusTotal behavior results need analyst interpretation. A single item does
 
 <img width="1441" height="767" alt="Image" src="https://github.com/user-attachments/assets/7554c864-e150-47fc-8775-4535748f3572" />
 
+
   
 - **IsDebuggerPresent** checks whether the program is being debugged. Malware may use this to detect analysis tools.
 - **Sleep** pauses execution. Malware may delay activity to avoid short sandbox runs.
