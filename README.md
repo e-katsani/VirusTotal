@@ -114,7 +114,7 @@ Static analysis is useful, but it does not show everything. If an analyst needs 
 | Static analysis | Reviews a file without running it | Hash lookup, metadata, imports, strings, vendor detections | Safer first step |
 | Dynamic analysis | Runs the file in an isolated lab to observe behavior | Processes, files written, registry changes, network traffic | More detailed but riskier |
 
-This project uses **static analysis** only.
+This project does not execute malware locally. The primary workflow uses static and hash-based analysis, while existing VirusTotal sandbox behavior results are reviewed when available.
 
 ---
 
