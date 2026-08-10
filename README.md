@@ -307,7 +307,7 @@ Some VirusTotal behavior results need analyst interpretation. A single item does
 - **`GetTickCount`** checks system uptime and can be used for timing or sandbox-detection logic.
 - **`GetSystemMetrics`** collects system information and can help malware recognize virtual or analysis environments.
 
-  | Import or Function | Possible Meaning |
+### Import or Function | Possible Meaning |
 |---|---|
 | `CreateProcessA` | May start another process |
 | `VirtualProtect` | May change memory permissions |
@@ -323,7 +323,6 @@ The website analysis showed that the hash had strong detection results and usefu
 Because this project uses a safe educational sample and hash-based analysis, the investigation demonstrates the workflow without executing malware locally.
 
 ---
-
 
 ## 14. VirusTotal API and Python Demo
 
