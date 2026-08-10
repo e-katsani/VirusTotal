@@ -228,7 +228,7 @@ Review detections, metadata, relationships, behavior clues, and MITRE mappings
 Recommend response actions
 ```
 
-## 12. VirusTotal API and Python Demo
+## 12. VirusTotal API 
 
 The Python script demonstrates how VirusTotal lookups can be automated.
 
@@ -261,7 +261,18 @@ The API script helps show:
 
 ---
 
-## 13. Important Analysis Features
+## 13. VirusTotal Demo  
+
+A short backup demo video is included in this repository:
+
+[Watch API_Demo.mov](https://github.com/user-attachments/assets/100207e4-20a9-4198-81c6-a204204be24b)
+
+
+The video shows the Python script using the VirusTotal API to perform a safe file-hash lookup. This is the automated part of the project. It shows how an analyst can check a hash, receive a status code, and review detection results from the command line.
+
+---
+
+## 14. Important Analysis Features
 
 ### Antivirus detections
 
@@ -311,7 +322,7 @@ These indicators can be searched in firewall logs, DNS logs, proxy logs, EDR too
 
 ---
 
-## 14. MITRE ATT&CK Mapping
+## 15. MITRE ATT&CK Mapping
 
 VirusTotal and sandbox enrichment may show behaviors mapped to **MITRE ATT&CK**.
 
@@ -329,17 +340,6 @@ Example techniques seen in the project screenshots include:
 | `T1082 - System Information Discovery` | The file may collect system information |
 
 These mappings should be treated as investigation clues. They should be validated with additional evidence.
-
----
-
-## 15. Demo Video 
-
-A short backup demo video is included in this repository:
-
-[Watch API_Demo.mov](https://github.com/user-attachments/assets/100207e4-20a9-4198-81c6-a204204be24b)
-
-
-The video shows the Python script using the VirusTotal API to perform a safe file-hash lookup. This is the automated part of the project. It shows how an analyst can check a hash, receive a status code, and review detection results from the command line.
 
 ---
 
