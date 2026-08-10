@@ -204,19 +204,7 @@ The real `.env` file should **not** be uploaded to GitHub because it contains a 
 
 ---
 
-## 11. Repository Contents
-
-This repository includes the main project documentation, the Python API script, screenshots, and a short demo video.
-
-- `README.md` — Main project explanation and analysis
-- `threat_intelligence_tool.py` — Python script used for VirusTotal API hash lookups
-- `API_Demo.mov` — Short demo video showing the API lookup process
-- `API_screenshots/` — Screenshots from the API setup and command-line demo
-- `Website_screenshots/` — Screenshots from the VirusTotal website analysis
-
-The screenshots and demo support the project workflow by showing both the automated API lookup and the manual VirusTotal website review.
-
-## 12. Workflow
+## 11. Workflow
 
 ```text
 Suspicious file received
@@ -240,9 +228,138 @@ Review detections, metadata, relationships, behavior clues, and MITRE mappings
 Recommend response actions
 ```
 
+## 12. VirusTotal API and Python Demo
+
+The Python script demonstrates how VirusTotal lookups can be automated.
+
+Instead of manually searching one hash at a time on the website, the API allows an analyst to build a repeatable workflow.
+
+Example command:
+
+```bash
+python threat_intelligence_tool.py
+```
+
+Example hash input:
+
+```text
+5ff465afaabcbf015@d1a3ab2c2e74f3a4426467
+```
+
+Example output:
+
+<img width="1108" height="798" alt="Image" src="https://github.com/user-attachments/assets/690b8e32-4f58-49c8-9d38-f66554747c30" />
+
+The API script helps show:
+
+- Automated hash lookup
+- Detection count extraction
+- Vendor detection names
+- Basic file metadata
+- Repeatable command-line analysis
+- Structured results that can be saved or documented
+
 ---
 
-## 13. Using the VirusTotal Website for Hash Analysis
+## 13. Important Analysis Features
+
+### Antivirus detections
+
+Antivirus detections show whether security vendors already recognize the file. Many detections usually increase confidence that the file is malicious.
+
+### File metadata
+
+Metadata can include file name, type, size, hashes, first submission date, and last analysis date.
+
+### Compile timestamp
+
+The compile timestamp may show when the file was built. This can help with timeline analysis, but timestamps can be changed by attackers.
+
+### Packing and obfuscation
+
+Packing and obfuscation are techniques used to hide a program's real code or behavior. Indicators may include high entropy, suspicious sections, or limited visible imports.
+
+### Imports
+
+Imports are functions used by a program. They can give clues about behavior.
+
+Imports are clues, not proof. They help the analyst form a hypothesis.
+
+### Host-based indicators
+
+Host-based indicators are artifacts that may appear on an infected computer, such as:
+
+- Dropped files
+- Suspicious file paths
+- Registry keys
+- New services
+- Suspicious processes
+- Persistence mechanisms
+
+### Network-based indicators
+
+Network-based indicators are signs of suspicious network activity, such as:
+
+- Domains
+- IP addresses
+- URLs
+- DNS lookups
+- HTTP requests
+- TLS certificates
+
+These indicators can be searched in firewall logs, DNS logs, proxy logs, EDR tools, and SIEM platforms.
+
+---
+
+## 14. MITRE ATT&CK Mapping
+
+VirusTotal and sandbox enrichment may show behaviors mapped to **MITRE ATT&CK**.
+
+MITRE ATT&CK is a framework used to describe attacker behaviors. It helps analysts explain what malware or an attacker may be trying to do.
+
+Example techniques seen in the project screenshots include:
+
+| MITRE Technique | Meaning |
+|---|---|
+| `T1027 - Obfuscated Files or Information` | The file may try to hide its code or intent |
+| `T1543 - Create or Modify System Process` | The file may attempt persistence or system process modification |
+| `T1543.003 - Windows Service` | The file may create or modify a Windows service |
+| `T1569 - System Services` | The file may abuse services for execution |
+| `T1083 - File and Directory Discovery` | The file may search files or folders |
+| `T1082 - System Information Discovery` | The file may collect system information |
+
+These mappings should be treated as investigation clues. They should be validated with additional evidence.
+
+---
+
+## 15. Demo Video 
+
+A short backup demo video is included in this repository:
+
+[Watch API_Demo.mov](https://github.com/user-attachments/assets/100207e4-20a9-4198-81c6-a204204be24b)
+
+
+The video shows the Python script using the VirusTotal API to perform a safe file-hash lookup. This is the automated part of the project. It shows how an analyst can check a hash, receive a status code, and review detection results from the command line.
+
+---
+
+## 16. Analyst Findings
+
+Based on the VirusTotal results, the suspicious file hash matched known detections from multiple vendors.
+
+Key findings included:
+
+- The file matched antivirus detections.
+- VirusTotal provided file metadata and detection names.
+- Static-analysis clues suggested suspicious behavior.
+- Host-based and network-based indicators were available for further investigation.
+- MITRE ATT&CK mappings helped describe possible attacker behavior.
+
+The findings support treating the file as suspicious or malicious and escalating for further analysis if needed.
+
+---
+
+## 17. Using the VirusTotal Website for Hash Analysis
 
 The **VirusTotal website** is the manual and visual part of this project. VirusTotal gives different options for checking suspicious items. An analyst can upload a file directly, search by a file hash, or check a URL, domain, or IP address.
 
@@ -325,138 +442,7 @@ Because this project uses a safe educational sample and hash-based analysis, the
 
 ---
 
-## 14. VirusTotal API and Python Demo
-
-The Python script demonstrates how VirusTotal lookups can be automated.
-
-Instead of manually searching one hash at a time on the website, the API allows an analyst to build a repeatable workflow.
-
-Example command:
-
-```bash
-python threat_intelligence_tool.py
-```
-
-Example hash input:
-
-```text
-5ff465afaabcbf015@d1a3ab2c2e74f3a4426467
-```
-
-Example output:
-
-<img width="1108" height="798" alt="Image" src="https://github.com/user-attachments/assets/690b8e32-4f58-49c8-9d38-f66554747c30" />
-
-The API script helps show:
-
-- Automated hash lookup
-- Detection count extraction
-- Vendor detection names
-- Basic file metadata
-- Repeatable command-line analysis
-- Structured results that can be saved or documented
-
----
-
-## 15. Important Analysis Features
-
-### Antivirus detections
-
-Antivirus detections show whether security vendors already recognize the file. Many detections usually increase confidence that the file is malicious.
-
-### File metadata
-
-Metadata can include file name, type, size, hashes, first submission date, and last analysis date.
-
-### Compile timestamp
-
-The compile timestamp may show when the file was built. This can help with timeline analysis, but timestamps can be changed by attackers.
-
-### Packing and obfuscation
-
-Packing and obfuscation are techniques used to hide a program's real code or behavior. Indicators may include high entropy, suspicious sections, or limited visible imports.
-
-### Imports
-
-Imports are functions used by a program. They can give clues about behavior.
-
-Imports are clues, not proof. They help the analyst form a hypothesis.
-
-### Host-based indicators
-
-Host-based indicators are artifacts that may appear on an infected computer, such as:
-
-- Dropped files
-- Suspicious file paths
-- Registry keys
-- New services
-- Suspicious processes
-- Persistence mechanisms
-
-### Network-based indicators
-
-Network-based indicators are signs of suspicious network activity, such as:
-
-- Domains
-- IP addresses
-- URLs
-- DNS lookups
-- HTTP requests
-- TLS certificates
-
-These indicators can be searched in firewall logs, DNS logs, proxy logs, EDR tools, and SIEM platforms.
-
----
-
-## 16. MITRE ATT&CK Mapping
-
-VirusTotal and sandbox enrichment may show behaviors mapped to **MITRE ATT&CK**.
-
-MITRE ATT&CK is a framework used to describe attacker behaviors. It helps analysts explain what malware or an attacker may be trying to do.
-
-Example techniques seen in the project screenshots include:
-
-| MITRE Technique | Meaning |
-|---|---|
-| `T1027 - Obfuscated Files or Information` | The file may try to hide its code or intent |
-| `T1543 - Create or Modify System Process` | The file may attempt persistence or system process modification |
-| `T1543.003 - Windows Service` | The file may create or modify a Windows service |
-| `T1569 - System Services` | The file may abuse services for execution |
-| `T1083 - File and Directory Discovery` | The file may search files or folders |
-| `T1082 - System Information Discovery` | The file may collect system information |
-
-These mappings should be treated as investigation clues. They should be validated with additional evidence.
-
----
-
-## 17. Demo Video 
-
-A short backup demo video is included in this repository:
-
-[Watch API_Demo.mov](https://github.com/user-attachments/assets/100207e4-20a9-4198-81c6-a204204be24b)
-
-
-The video shows the Python script using the VirusTotal API to perform a safe file-hash lookup. This is the automated part of the project. It shows how an analyst can check a hash, receive a status code, and review detection results from the command line.
-
----
-
-## 18. Analyst Findings
-
-Based on the VirusTotal results, the suspicious file hash matched known detections from multiple vendors.
-
-Key findings included:
-
-- The file matched antivirus detections.
-- VirusTotal provided file metadata and detection names.
-- Static-analysis clues suggested suspicious behavior.
-- Host-based and network-based indicators were available for further investigation.
-- MITRE ATT&CK mappings helped describe possible attacker behavior.
-
-The findings support treating the file as suspicious or malicious and escalating for further analysis if needed.
-
----
-
-## 19. Recommended Response Actions
+## 18. Recommended Response Actions
 
 An analyst should:
 
@@ -470,7 +456,7 @@ An analyst should:
 
 ---
 
-## 20. Strengths of VirusTotal
+## 19. Strengths of VirusTotal
 
 - Easy for beginners to use
 - Supports file hashes, files, URLs, domains, and IP addresses
@@ -484,7 +470,7 @@ An analyst should:
 
 ---
 
-## 21. Limitations of VirusTotal
+## 20. Limitations of VirusTotal
 
 VirusTotal is useful, but it is not perfect.
 
@@ -518,7 +504,7 @@ The public API may have rate limits and may not expose every feature available i
 
 ---
 
-## 22. Website vs. API Comparison
+## 21. Website vs. API Comparison
 
 | Feature | VirusTotal Website | VirusTotal API + Python |
 |---|---|---|
@@ -532,7 +518,7 @@ The public API may have rate limits and may not expose every feature available i
 
 ---
 
-## 23. Final Summary
+## 22. Final Summary
 
 This project shows how VirusTotal can be used as a safe first step in malware triage.
 
@@ -545,6 +531,16 @@ The VirusTotal website helps analysts review detailed file information visually.
 VirusTotal is not a replacement for full malware analysis, but it is a valuable starting point for investigation, documentation, and incident response.
 
 ---
+
+## 23. Repository Contents
+
+This repository includes the main project documentation, the Python API script, screenshots, and a short demo video.
+
+- `README.md` — Main project explanation and analysis
+- `threat_intelligence_tool.py` — Python script used for VirusTotal API hash lookups
+- `API_Demo.mov` — Short demo video showing the API lookup process
+- `API_screenshots/` — Screenshots from the API setup and command-line demo
+- `Website_screenshots/` — Screenshots from the VirusTotal website analysis
 
 ## 24. References
 
