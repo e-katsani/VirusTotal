@@ -427,6 +427,7 @@ View Image Below
 
 
 <img width="1286" height="686" alt="Image" src="https://github.com/user-attachments/assets/0dcd4167-9dcd-4c3c-911c-b097e99419c9" />
+
 ### Imports and Functions
 
 Imports and functions are clues about what a file may be able to do. They do not prove that a file is malicious by themselves, but they help the analyst understand possible behavior.
