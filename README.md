@@ -560,9 +560,11 @@ This repository includes the main project documentation, the Python API script, 
 
 ## 24. References
 
-- VirusTotal. Official Website and Documentation. Retrieved from https://www.virustotal.com/ 
-- SentinelOne Labs. "Exploring the VirusTotal Dataset: An Analyst's Guide to Effective Threat Research."
-- TryHackMe lab materials used for educational indicators. Retrieved from https://tryhackme.com/room/intromalwareanalysis
+- Aleksandar Milenkoski (2024). Exploring the VIRUSTOTAL Dataset: An analyst’s guide to effective threat research. Retrieved from https://www.sentinelone.com/labs/exploring-the-virustotal-dataset-an-analysts-guide-to-effective-threat-research/
 - BFOR/BFORE 418/618. Malware Reverse Engineering course materials.
-- Sikorski, Michael, and Andrew Honig. *Practical Malware Analysis: The Hands-On Guide to Dissecting Malicious Software.*
+- MITRE ATT&CK. (n.d.). MITRE ATT&CK framework. https://attack.mitre.org/
+- OpenAI. (2026). ChatGPT (GPT-5.3) [Large language model]. https://chat.openai.com/
+- Sikorski, Michael, and Andrew Honig. *Practical Malware Analysis: The Hands-On Guide to Dissecting Malicious Software.
+- TryHackMe lab materials used for educational indicators. Retrieved from https://tryhackme.com/room/intromalwareanalysis
+- VirusTotal. Official Website and Documentation. Retrieved from https://www.virustotal.com/.*
 
